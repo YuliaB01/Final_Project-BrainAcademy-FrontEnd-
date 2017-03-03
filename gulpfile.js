@@ -8,7 +8,7 @@ var gulpIf = require("gulp-if");
 var autoprefixer = require("gulp-autoprefixer");
 var sync = require("browser-sync").create();
 
-var isDevelopment = true;
+var isDevelopment = false;
 
 gulp.task("css:own", function() {
     return gulp.src("src/Styles/main.less")
