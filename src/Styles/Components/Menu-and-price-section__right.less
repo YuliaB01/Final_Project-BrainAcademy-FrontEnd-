@@ -1,0 +1,151 @@
+.Menu-and-price-section__right-part {
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -260px;
+    right: 10px;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -215px;
+    border-top: 1px dashed #9e9c93;
+    border-left: 1px dashed #9e9c93;
+    //border-right: 1px dashed #9e9c93;
+    z-index: 3;
+    width: 430px;
+    height: 540px;
+  }
+}
+
+.menu-1 {
+  width: 445px;
+  height: 550px;
+  margin: 85px auto 70px;
+  background-color: #f3f1e9;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  background-image: url(/Images/Weat-2.png);
+  background-repeat: no-repeat;
+  background-position-x: 235px;
+  background-position-y: 390px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 100%;
+    left: 0;
+    background: transparent;
+    border: 20px solid;
+    border-top-color: #f7f7f6;
+    border-right-color: #f7f7f6;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    //box-shadow: 0px 0px 3px #000;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 405px;
+    height: 50px;
+    bottom: -40px;
+    left: 40px;
+    background-color: #f3f1e9;
+
+  }
+}
+
+.border {
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -265px;
+    right: 10px;
+    bottom: -42px;
+    left: 50%;
+    margin-left: -183px;
+    border-bottom: 1px dashed #9e9c93;
+    border-right: 1px dashed #9e9c93;
+    z-index: 3;
+    width: 398px;
+    height: 571px;
+  }
+}
+
+.menu-1-text:after {
+  content: "";
+  display: block;
+  width: 100%;
+  clear: both;
+}
+.menu-1-head > * {
+  display: block;
+}
+
+.menu-1-text-left {
+  float: left;
+  width: 50%;
+  font-family: "AlegreyaBold", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: @footer-link-color;
+}
+
+.menu-1-text-right {
+  float: right;
+  width: 50%;
+  font-family: "AlegreyaBold", sans-serif;
+  font-size: 14px;
+  color: @footer-link-color;
+}
+.menu-1-img {
+  margin: 0 auto;
+}
+
+.menu-1-main-heading {
+  font-family: "AlegreyaBold", sans-serif;
+  font-size: 44px;
+  line-height: 60px;
+  color: @header-height;
+  margin-bottom: 40px;
+}
+
+.menu-1-paragraph {
+  font-family: "ProximaNovaRegular", sans-serif;
+  font-size: 14px;
+  color: @header-height;
+  line-height: 30px;
+  letter-spacing: 1px;
+  margin-bottom: 55px;
+}
+
+.menu-1-btn {
+  height: 50px;
+  width: 190px;
+  border: 1px solid #9e9c93;
+  background-color: transparent;
+  color: #a47d5e;
+  text-transform: uppercase;
+  font-family: "AlegreyaBold", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: background-color linear .3s;
+  position: relative;
+  z-index: 1000;
+
+  &:hover {
+    background-color: darken(@footer-bg-color, 10%);
+  }
+
+  &:active,
+  &:focus {
+    background-color: darken(@footer-bg-color, 20%);
+    outline: none;
+  }
+}

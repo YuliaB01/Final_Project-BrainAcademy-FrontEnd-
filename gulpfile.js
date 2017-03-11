@@ -7,8 +7,9 @@ var uglify = require("gulp-uglify");
 var gulpIf = require("gulp-if");
 var autoprefixer = require("gulp-autoprefixer");
 var sync = require("browser-sync").create();
+var image = require("gulp-image");
 
-var isDevelopment = false;
+var isDevelopment = true;
 
 gulp.task("css:own", function() {
     return gulp.src("src/Styles/main.less")
@@ -25,6 +26,7 @@ gulp.task("css:vendor", function() {
     return gulp.src([
         "node_modules/bootstrap/dist/css/bootstrap.css",
         "node_modules/font-awesome/css/font-awesome.css"
+
     ])
         .pipe(gulpIf(!isDevelopment, nano()))
         .pipe(concat("vendor.css"))
@@ -50,9 +52,33 @@ gulp.task("js:vendor", function() {
         .pipe(gulp.dest("dist/js"));
 });
 
+gulp.task("fonts", function() {
+    return gulp.src([
+        "src/Fonts/**/*.ttf",
+        "node_modules/font-awesome/fonts/**"
+    ])
+        .pipe(gulp.dest("dist/Fonts"));
+});
+
 gulp.task("html", function() {
     return gulp.src("src/*.html")
         .pipe(gulp.dest("dist"));
+});
+
+gulp.task("images", function() {
+    return gulp.src("src/Images/**/*.{png,jpg,gif,jpeg,svg}")
+        // .pipe(image({
+        //     pngquant: true,
+        //     optipng: false,
+        //     zopflipng: true,
+        //     jpegRecompress: false,
+        //     jpegoptim: true,
+        //     mozjpeg: true,
+        //     gifsicle: true,
+        //     svgo: true,
+        //     concurrent: 10
+        // }))
+        .pipe(gulp.dest("dist/Images"));
 });
 
 gulp.task("css", ["css:own", "css:vendor"]);
@@ -69,9 +95,16 @@ gulp.task("watch", ["build"], function() {
 
    gulp.watch("src/*.html", ["html"]);
    gulp.watch("dist/*.html", ["html"]).on("change", sync.reload);
+
+    gulp.watch("src/Fonts/**/*.ttf", ["fonts"]);
+    gulp.watch("dist/Fonts/**/*.ttf", ["fonts"]).on("change", sync.reload);
+
+    gulp.watch("src/Images/**/*.{png,jpg,gif,jpeg,svg}", ["images"]);
+    gulp.watch("dist/Images/**/*.{png,jpg,gif,jpeg,svg}", ["images"]).on("change", sync.reload);
+
 });
 
-gulp.task("build", ["html", "css", "js"]);
+gulp.task("build", ["html", "css", "js", "fonts", "images"]);
 gulp.task("default", ["build", "watch"]);
 
 

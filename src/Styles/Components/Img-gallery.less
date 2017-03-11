@@ -1,0 +1,156 @@
+.Img-gallery {
+  text-align: center;
+  margin: 120px auto;
+  position: relative;
+  //height: 510px;
+  width: 100%;
+  padding: 0 30px;
+
+
+  &:before {
+    width: 275px;
+    height: 275px;
+    display: block;
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    margin-top: -140px;
+    bottom: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(/Images/Vektor1.png) no-repeat;
+    z-index: 3;
+    opacity: .9;
+  }
+
+  &:after {
+    width: 230px;
+    display: block;
+    content: "Tastes so good!";
+    position: absolute;
+    top: 50%;
+    margin-top: -60px;
+    left: 50%;
+    margin-left: -115px;
+    z-index: 4;
+    color: #c9b176;
+    font-size: 30px;
+    font-family: AlegreyaRegular,sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    margin-top: 110px;
+    margin-right: -20px;
+  }
+
+  &__item {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    padding: 0 20px 20px 0;
+
+
+  }
+
+  &__link {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      left: 10px;
+      border: 5px solid #fff;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    //outline: 4px solid white;
+    //outline-offset: -15px;
+    vertical-align: middle;
+    transition: box-shadow linear .3s;
+    transition: transform linear .3s;
+
+    &:hover {
+      box-shadow: 0 0 20px #0E0E0F;
+      transform: scale(1.1);
+    }
+  }
+}
+
+//@media (max-width: 1245px) {
+//  .Img-gallery {
+//    &__img {
+//      width: 100%;
+//      height: auto;
+//    }
+//  }
+//}
+
+//@media (max-width: 1200px) {
+//  .Img-gallery {
+//    &__img {
+//      width: 250px;
+//      height: auto;
+//    }
+//
+//    &__list {
+//      margin: auto 0;
+//      padding: 0;
+//      list-style: none;
+//      margin-top: 110px;
+//      position: relative;
+//
+//      &:before {
+//        left: -60px;
+//        top: 100px;
+//      }
+//
+//      &:after {
+//        top: 185px;
+//        left: 150px;
+//      }
+//    }
+//  }
+//}
+
+//@media (max-width: 1115px) {
+//  .Img-gallery {
+//    &__img {
+//      width: 230px;
+//      height: auto;
+//    }
+//
+//    &__list {
+//      margin: auto 0;
+//      padding: 0;
+//      list-style: none;
+//      margin-top: 110px;
+//      position: relative;
+//
+//      &:before {
+//        left: -25px;
+//        top: 90px;
+//      }
+//
+//      &:after {
+//        top: 185px;
+//        left: 150px;
+//      }
+//    }
+//  }
+//}
