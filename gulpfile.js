@@ -25,8 +25,8 @@ gulp.task("css:own", function() {
 gulp.task("css:vendor", function() {
     return gulp.src([
         "node_modules/bootstrap/dist/css/bootstrap.css",
-        "node_modules/font-awesome/css/font-awesome.css"
-
+        "node_modules/font-awesome/css/font-awesome.css",
+        "src/Resources/jquery.bxslider/jquery.bxslider.css"
     ])
         .pipe(gulpIf(!isDevelopment, nano()))
         .pipe(concat("vendor.css"))
@@ -44,7 +44,12 @@ gulp.task("js:own", function() {
 gulp.task("js:vendor", function() {
     return gulp.src([
         "node_modules/jquery/dist/jquery.js",
-        "node_modules/bootstrap/dist/js/bootstrap.js"
+        "node_modules/jquery-validation/dist/jquery.validate.js",
+        "node_modules/bootstrap/dist/js/bootstrap.js",
+        // "node_modules/parallax.js/src/parallax.js",
+        "src/Resources/jquery.bxslider/jquery.bxslider.js",
+        "src/Resources/scrollup/dist/jquery.scrollUp.js",
+        "src/Resources/jRate-master/src/jRate.js"
         // "node_modules/toastr/build/toastr.min.js"
     ])
         .pipe(concat("vendor.js"))
@@ -66,7 +71,10 @@ gulp.task("html", function() {
 });
 
 gulp.task("images", function() {
-    return gulp.src("src/Images/**/*.{png,jpg,gif,jpeg,svg}")
+    return gulp.src([
+        "src/Images/**/*.{png,jpg,gif,jpeg,svg}",
+        "src/Resources/jquery.bxslider/images/*.{png,gif}"
+    ])
         // .pipe(image({
         //     pngquant: true,
         //     optipng: false,
