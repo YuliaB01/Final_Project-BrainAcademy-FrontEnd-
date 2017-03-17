@@ -5,7 +5,6 @@ $(document).ready(function() {
     initSlider();
     initRating();
     initEvents();
-    initSubmit();
 
     //Header change background-color on page scroll
     $(window).on("scroll", function() {
@@ -78,7 +77,9 @@ function initValidator() {
             }
         },
         submitHandler: function(form) {
-            form.submit();
+            $.post("/", $('form[name="contact-form"]').serialize()).always(function (data) {
+                toastr.success("Thank you!Your message was successfully send!");
+            });
         }
     });
 }
@@ -143,31 +144,18 @@ function initEvents() {
     });
 }
 
-function initSubmit() {
-    $('#submit-btn').click(function() {
-        if(initValidator) {
-            toastr.success("Thank you!Your message was successfully send!");
-        }
-    });
-
-    $('#submit-btn').click(function() {
-        if(!initValidator) {
-            toastr.error("Please, fill in all required fields!");
-        }
-    });
-}
-
 function initDataTable() {
     $('#menu-table').DataTable({
         ajax: {
-            url: "/data.json",
+            url: '/data.json',
             dataSrc: ''
         },
         columns: [
-            { data: "dish" },
-            { data: "ingredients" },
-            { data: "weight" },
-            { data: "price" }
+            { data: 'dish' },
+            { data: 'ingredients' },
+            { data: 'weight' },
+            { data: 'price' }
         ]
     });
 }
+
