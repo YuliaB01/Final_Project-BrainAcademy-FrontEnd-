@@ -26,7 +26,9 @@ gulp.task("css:vendor", function() {
     return gulp.src([
         "node_modules/bootstrap/dist/css/bootstrap.css",
         "node_modules/font-awesome/css/font-awesome.css",
-        "src/Resources/jquery.bxslider/jquery.bxslider.css"
+        "node_modules/toastr/build/toastr.css",
+        "src/Resources/jquery.bxslider/jquery.bxslider.css",
+        "node_modules/datatables.net-dt/css/jquery.dataTables.css"
     ])
         .pipe(gulpIf(!isDevelopment, nano()))
         .pipe(concat("vendor.css"))
@@ -49,8 +51,9 @@ gulp.task("js:vendor", function() {
         // "node_modules/parallax.js/src/parallax.js",
         "src/Resources/jquery.bxslider/jquery.bxslider.js",
         "src/Resources/scrollup/dist/jquery.scrollUp.js",
-        "src/Resources/jRate-master/src/jRate.js"
-        // "node_modules/toastr/build/toastr.min.js"
+        "src/Resources/jRate-master/src/jRate.js",
+        "node_modules/toastr/build/toastr.min.js",
+        "node_modules/datatables.net/js/jquery.dataTables.js"
     ])
         .pipe(concat("vendor.js"))
         .pipe(gulpIf(!isDevelopment, uglify()))
@@ -70,10 +73,16 @@ gulp.task("html", function() {
         .pipe(gulp.dest("dist"));
 });
 
+gulp.task("json", function() {
+    return gulp.src("src/data.json")
+        .pipe(gulp.dest("dist"));
+});
+
 gulp.task("images", function() {
     return gulp.src([
         "src/Images/**/*.{png,jpg,gif,jpeg,svg}",
-        "src/Resources/jquery.bxslider/images/*.{png,gif}"
+        "src/Resources/jquery.bxslider/images/*.{png,gif}",
+        "node_modules/datatables.net-dt/images/*.png"
     ])
         // .pipe(image({
         //     pngquant: true,
@@ -104,6 +113,9 @@ gulp.task("watch", ["build"], function() {
    gulp.watch("src/*.html", ["html"]);
    gulp.watch("dist/*.html", ["html"]).on("change", sync.reload);
 
+   gulp.watch("src/data.json", ["json"]);
+    gulp.watch("src/data.json", ["json"]).on("change", sync.reload);
+
     gulp.watch("src/Fonts/**/*.ttf", ["fonts"]);
     gulp.watch("dist/Fonts/**/*.ttf", ["fonts"]).on("change", sync.reload);
 
@@ -112,7 +124,7 @@ gulp.task("watch", ["build"], function() {
 
 });
 
-gulp.task("build", ["html", "css", "js", "fonts", "images"]);
+gulp.task("build", ["html", "css", "js", "fonts", "images", "json"]);
 gulp.task("default", ["build", "watch"]);
 
 

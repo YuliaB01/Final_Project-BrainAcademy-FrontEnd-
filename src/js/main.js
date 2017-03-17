@@ -1,9 +1,11 @@
 $(document).ready(function() {
     initValidator();
+    initDataTable();
     initScrollUp();
     initSlider();
     initRating();
     initEvents();
+    initSubmit();
 
     //Header change background-color on page scroll
     $(window).on("scroll", function() {
@@ -44,7 +46,8 @@ function initValidator() {
                 required: true
             },
             number: {
-                required: true
+                required: true,
+                minlength: 10
             },
             date: {
                 required: true
@@ -65,6 +68,13 @@ function initValidator() {
             },
             message: {
                 required: "Please provide your message"
+            },
+            number: {
+                required: "Please, enter your valid phone number",
+                minlength: "Your phone number is to short"
+            },
+            date: {
+                required: "Please, choose convenient date and time for call"
             }
         },
         submitHandler: function(form) {
@@ -130,5 +140,34 @@ function initEvents() {
         if($('#inlineRadio1').prop('checked')) {
             $('#request-data').slideUp();
         }
+    });
+}
+
+function initSubmit() {
+    $('#submit-btn').click(function() {
+        if(initValidator) {
+            toastr.success("Thank you!Your message was successfully send!");
+        }
+    });
+
+    $('#submit-btn').click(function() {
+        if(!initValidator) {
+            toastr.error("Please, fill in all required fields!");
+        }
+    });
+}
+
+function initDataTable() {
+    $('#menu-table').DataTable({
+        ajax: {
+            url: "/data.json",
+            dataSrc: ''
+        },
+        columns: [
+            { data: "dish" },
+            { data: "ingredients" },
+            { data: "weight" },
+            { data: "price" }
+        ]
     });
 }
