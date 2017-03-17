@@ -1,3 +1,4 @@
+// nav-bar bootstrap styles
 .navbar-toggle {
   margin-top: 18px;
   margin-bottom: 18px;
@@ -15,12 +16,210 @@
   box-shadow: none;
 }
 
+.navbar-toggle .icon-bar:nth-child(2) {
+  transform: rotate(45deg) translate(4.4px, 4.4px);
+}
+.navbar-toggle .icon-bar:nth-child(3) {
+  width: 0;
+  opacity: 0;
+}
+.navbar-toggle .icon-bar:last-child {
+  transform: rotate(-45deg) translate(4.4px, -4.4px);
+}
+.navbar-toggle.collapsed .icon-bar:nth-child(2),
+.navbar-toggle.collapsed .icon-bar:last-child {
+  transform: none;
+}
+.navbar-toggle.collapsed .icon-bar:nth-child(3) {
+  width: 22px;
+  opacity: 1;
+}
+
+//bx-slider plugin styles
+.bx-wrapper {
+  border: none;
+  margin-top: 60px;
+  background: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.bx-wrapper img {
+  max-width: none;
+}
+
+.bx-wrapper .bx-prev {
+  left: 10px;
+  background: url(/Images/slide/interface-arrow_left.svg) no-repeat 0 0;
+}
+
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url(/Images/controls.png) no-repeat -43px -32px;
+}
+
+.bx-viewport {
+  height: 505.297px!important;
+}
+
+#bx-pager {
+  width: 95%;
+  height: 100px;
+  overflow: hidden;
+  text-align: justify;
+  padding-left: 45px;
+  padding-right: 45px;
+  .u-vertical-aligner;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.example-item #bx-pager a:hover img, .example-item #bx-pager a.active img {
+  border: solid #5280DD 1px;
+  box-shadow: 1px 2px 35px #ccc;
+}
+
+#bx-pager a {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+#bx-pager img {
+    width: 250px;
+    margin-top: -30px;
+    margin-left: -70px;
+    height: auto;
+  display: inline-block;
+
+  &:active,
+  &:focus {
+    border: solid #5280DD 1px;
+    box-shadow: 1px 2px 35px #ccc;
+  }
+}
+
+// scroll-up plugin styles
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  background: url(/Images/top.png) no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+//dataTable styles
+.dataTables {
+
+  &_length {
+    display: none;
+  }
+
+  &_filter label {
+    font-family: "AlegreyaBold", sans-serif;
+    font-size: 20px;
+    color: @footer-link-color;
+  }
+
+  &_filter input {
+    border: 1px solid #dfc691;
+  }
+
+}
+
+table.dataTable thead th,
+table.dataTable.no-footer {
+  border-bottom: 1px solid #a47d5e;
+}
+
+.dataTables_wrapper {
+  padding: 0 30px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #333333 !important;
+  border: 1px solid #dfc691;
+  background-color: transparent;
+  background: linear-gradient(to bottom, white 0%, #dfc691 100%);
+}
+
+table.dataTable tbody tr {
+  background-color: transparent;
+}
+
+table.dataTable.display tbody tr.odd {
+   background-color: transparent;
+}
+
+table.dataTable.display tbody tr.odd > .sorting_1,
+table.dataTable.display tbody tr.even > .sorting_1 {
+  background: transparent;
+  text-transform: uppercase;
+  font-family: "AlegreyaBold", sans-serif;
+  color: @footer-link-color;
+}
+
+table.dataTable.display tbody tr td {
+  color: #979285;
+  font-family: "AlegreyaRegular", sans-serif;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  float: none;
+  text-align: center;
+}
+
+.dataTables_wrapper .dataTables_info {
+  text-align: center;
+  padding-bottom: 20px;
+  float: none;
+}
+
+@media (max-width: 1200px) {
+   #bx-pager {
+     width: 98%;
+     padding-left: 40px;
+     padding-right: 40px;
+   }
+}
+
+@media (max-width: 992px) {
+    .bx-viewport {
+      height: 825.297px!important;
+    }
+
+    #bx-pager {
+      width: 93%;
+    }
+}
 @media (max-width: 767px) {
   //.navbar-collapse.in {
   //  overflow-y: visible;
   //}
 
+  @media (max-width: 375px) {
+    #bx-pager {
+      display: none;
+    }
+
+    .bx-viewport {
+      height: 721.297px!important;
+    }
+  }
   .navbar-collapse {
     padding: 0;
   }
 }
+
+
