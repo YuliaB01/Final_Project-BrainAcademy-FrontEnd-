@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    removeClassOnResize();
     initStarRating();
     initValidator();
     initDataTable();
@@ -258,4 +259,15 @@ function initStarRating() {
             $('#count').html(value);
         });
     }
+}
+
+function removeClassOnResize() {
+    $( window ).on('resize', function() {
+        var windowSize = $(window).width();
+        if(windowSize < 992){
+            $('.img-div').removeClass('hvr-curl-bottom-left');
+        } else {
+            $('.img-div').addClass('hvr-curl-bottom-left');
+        }
+    });
 }

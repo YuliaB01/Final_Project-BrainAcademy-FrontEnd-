@@ -6,13 +6,13 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  //overflow-x: hidden;
 }
 
 .wrapper {
     min-height: 100%;
     margin-bottom: -240px;
     background-color: @footer-bg-color;
+    overflow: hidden;
 }
 
 .wrapper:after {
@@ -47,17 +47,6 @@ body, html {
   .u-clearfix;
 }
 
-@media (max-width: 1200px) {
-  .content-container {
-    max-width: 1170px;
-  }
-}
-
-@media (max-width: 992px) {
-  .content-container {
-    max-width: 970px;
-  }
-}
 
 .logo-container {
   float: left;
@@ -127,7 +116,7 @@ body, html {
 
 .carousel-wrapper {
   min-height: 760px;
-  background-image: url(/Images/cooking-time.jpg);
+  background-image: url(/Images/mispasta.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -186,34 +175,6 @@ body, html {
     line-height: 30px;
     letter-spacing: 1px;
     position: relative;
-  }
-}
-
-.starrr {
-  position: absolute;
-  top: 50%;
-  color: white;
-  margin-top: -100px;
-  left: 10%;
-}
-
-.starrr i {
-  font-size: 25px;
-  padding: 5px 1px;
-  cursor: pointer;
-  color: white;
-  display: block;
-}
-
-
-@media (max-width: 375px) {
-  .Recipes-header {
-    padding-top: 65px;
-
-    &__heading,
-    &__subheading {
-      line-height: 48px;
-    }
   }
 }
 
@@ -336,6 +297,32 @@ legend {
   font-size: 18px;
 }
 
+.price-table {
+  margin-bottom: 30px;
+}
+
+
+
+#slider-prev {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  top: 50%;
+  position: absolute;
+  margin-top: -20px;
+}
+
+#slider-next {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  top: 50%;
+  right: 0;
+  position: absolute;
+  margin-top: -20px;
+}
+
+
 .footer {
   height: 240px;
   background-color: @footer-bg-color;
@@ -344,7 +331,17 @@ legend {
   clear: both;
 }
 
+@media (max-width: 1200px) {
+  .content-container {
+    max-width: 1170px;
+  }
+}
+
 @media (max-width: 992px) {
+  .content-container {
+    max-width: 970px;
+  }
+
   .recipes-content {
     padding-bottom: 100px;
 
@@ -376,33 +373,21 @@ legend {
 
   .nav-container {
     width: 70%;
+    margin-right: -15px;
   }
 }
 
-.price-table {
-  margin-bottom: 30px;
+@media (max-width: 660px) {
+
 }
 
+@media (max-width: 375px) {
+  .Recipes-header {
+    padding-top: 65px;
 
-
-#slider-prev {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  //background: url(/Images/slide/interface-arrow_left.svg) no-repeat;
-  top: 50%;
-  position: absolute;
-  margin-top: -20px;
+    &__heading,
+    &__subheading {
+      line-height: 48px;
+    }
+  }
 }
-
-#slider-next {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  //background: url(/Images/slide/interface-arrow_right.svg) no-repeat;
-  top: 50%;
-  right: 0;
-  position: absolute;
-  margin-top: -20px;
-}
-

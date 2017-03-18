@@ -40,11 +40,52 @@
     margin-left: -250px;
   }
 
-  .jRate {
+  //star rating
+  .starrr {
     position: absolute;
-    top: 35%;
+    top: 50%;
+    color: white;
+    margin-top: -100px;
     left: 10%;
-    z-index: 1000;
+  }
+
+  .starrr i {
+    font-size: 25px;
+    padding: 5px 1px;
+    cursor: pointer;
+    color: white;
+    display: block;
+    text-shadow: 0px 2px 30px #000;
+  }
+  /* Curl Bottom Left */
+  .hvr-curl-bottom-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+  }
+  .hvr-curl-bottom-left:before {
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    /* IE9 */
+    background: linear-gradient(45deg,#e8eae7 45%,#aaa 50%,#ccc 56%,#fff 80%);
+    box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.4);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: width, height;
+    transition-property: width, height;
+  }
+  .hvr-curl-bottom-left:hover:before, .hvr-curl-bottom-left:focus:before, .hvr-curl-bottom-left:active:before {
+    width: 50px;
+    height: 50px;
   }
 
   &__text {
@@ -104,6 +145,7 @@
     color: @footer-link-color;
     letter-spacing: 1px;
     margin-top: @header-height;
+    padding-right: 50px;
   }
 
   &__readyIn {
@@ -269,15 +311,22 @@
   }
 }
 
+@media (max-width: 685px) {
+  .Carousel-section {
+    .inside {
+      padding-left: 40px;
+    }
+  }
+}
 @media (max-width: 660px) {
   .Carousel-section {
+
+    &__p {
+      padding-right: 50px;
+    }
     .carousel-slide {
       width: 95%;
       margin-left: 25px;
-    }
-
-    .jRate {
-      left: 15%;
     }
 
     .inside {
@@ -337,6 +386,23 @@
       height: 75%;
       padding-top: 15px;
       padding-left: 35px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .Carousel-section {
+
+    &__header {
+      font-size: 25px;
+      line-height: 55px;
+    }
+    &__p {
+      margin-top: 25px;
+    }
+
+    .inside {
+      padding-left: 25px;
     }
   }
 }
