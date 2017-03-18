@@ -51,7 +51,7 @@ gulp.task("js:vendor", function() {
         // "node_modules/parallax.js/src/parallax.js",
         "src/Resources/jquery.bxslider/jquery.bxslider.js",
         "src/Resources/scrollup/dist/jquery.scrollUp.js",
-        "src/Resources/jRate-master/src/jRate.js",
+        "src/Resources/jRate-master/dist/jRate.min.js",
         "node_modules/toastr/build/toastr.min.js",
         "node_modules/datatables.net/js/jquery.dataTables.js"
     ])

@@ -1,24 +1,85 @@
 .Carousel-section {
-  position: relative;
-
   &__content {
-
+    position: relative;
   }
 
-  &__img-div {
+  .carousel-slide {
+    padding-top: 50px;
+    padding-right: 100px;
+    margin-left: 65px;
+    width: 90%;
+    height: 510px;
+    //background: #fff;
+  }
+
+  .inside {
+    position: absolute;
+    bottom: 5%;
+    left: 43%;
     width: 40%;
+    height: 100px;
+    z-index: 3;
+    padding-left: 25px;
+    .u-vertical-aligner;
+  }
+
+  .active {
+    box-shadow: 0px 0px 20px #d8bba3;
+  }
+  .img-div {
+    width: 45%;
+    height: 100%;
     overflow: hidden;
     display: inline-block;
     float: left;
+    position: relative;
+  }
+
+  .img-div img {
+    width: 810px;
+    margin-left: -250px;
+  }
+
+  .jRate {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    z-index: 1000;
   }
 
   &__text {
     display: inline-block;
-    width: 60%;
+    width: 55%;
     float: left;
     background: #fff url(/Images/wind-weel.png) no-repeat 100% 100%;
-    height: 512px;
-    padding: @header-height;
+    height: 100%;
+    padding-top: 30px;
+    padding-left: 50px;
+    position: relative;
+
+    &:before {
+      .u-general-pseudo-element-styles;
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      border-radius: 50%;
+      top: 50%;
+      margin-top: -25px;
+      left: -25px;
+    }
+
+    &:after {
+      .u-general-pseudo-element-styles;
+      background-image: url(/Images/menu.png);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      height: 50px;
+      width: 50px;
+      z-index: 164;
+      top: 50%;
+      margin-top: -25px;
+      left: -25px;
+    }
   }
 
   &__header {
@@ -49,12 +110,12 @@
     width: 200px;
     height: 200px;
     position: absolute;
-    right: -100px;
-    top: -45px;
+    right: -95px;
+    top: -40px;
     background: url(/Images/bg.png) no-repeat;
     background-size: cover;
     z-index: 5;
-    box-shadow: -11px 40px 200px #c7bdb5;
+    box-shadow: -40px 30px 95px #c7bdb5;
     text-align: center;
 
     .head {
@@ -78,6 +139,204 @@
       font-family: "AlegreyaBold", serif;
       font-size: 18px;
       color: #979285;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .Carousel-section {
+    .img-div {
+      width: 40%;
+    }
+
+    &__text {
+      width: 60%;
+    }
+
+    &__header {
+      font-size: 40px;
+    }
+
+    .inside {
+      left: 40%;
+      width: 45%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .Carousel-section {
+
+    .jRate {
+      top: 15%;
+      left: 13%;
+    }
+    .carousel-slide {
+      height: 585px;
+      width: 70%;
+    }
+
+    .img-div {
+      width: 100%;
+      display: block;
+      float: none;
+      height: 65%;
+
+      & > img {
+        margin-left: -200px;
+        margin-top: -65px;
+      }
+    }
+
+    &__text {
+      width: 100%;
+      display: block;
+      float: none;
+      height: 80%;
+
+      &:before {
+        top: 0;
+        margin-top: -25px;
+        left: 50%;
+        margin-left: -25px;
+      }
+
+      &:after {
+        top: 0;
+        left: 50%;
+        margin-left: -25px;
+        transform: rotate(90deg);
+      }
+    }
+
+    &__p {
+      margin-top: @header-height - 15px;
+    }
+
+    &__readyIn {
+      top: -90%;
+      right: -95px;
+    }
+
+    &__header {
+      font-size: 40px;
+    }
+
+    .inside {
+      left: 12%;
+      width: 47%;
+    }
+  }
+}
+
+@media (max-width: 910px) {
+  .Carousel-section {
+    .carousel-slide {
+      width: 75%;
+    }
+
+    .inside {
+      width: 53%;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .Carousel-section {
+    .carousel-slide {
+      width: 80%;
+    }
+
+    .inside {
+      width: 57%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Carousel-section {
+    .carousel-slide {
+      width: 90%;
+    }
+
+    .jRate {
+      left: 15%;
+    }
+
+    .inside {
+      width: 65%;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .Carousel-section {
+    .carousel-slide {
+      width: 95%;
+      margin-left: 25px;
+    }
+
+    .jRate {
+      left: 15%;
+    }
+
+    .inside {
+      width: 70%;
+      left: 7%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .Carousel-section {
+    .carousel-slide {
+      width: 100%;
+      margin-left: 10px;
+      padding-right: 20px;
+    }
+
+    .jRate {
+      left: 15%;
+      top: 11%;
+    }
+
+    .inside {
+      left: 7%;
+      bottom: 0;
+      width: 80%;
+    }
+
+    &__readyIn {
+      width: 150px;
+      height: 150px;
+      right: 0;
+      top: -75%;
+      box-shadow: none;
+
+    }
+
+    .head {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .time {
+      font-size: 75px;
+    }
+
+    .img-div {
+      height: 50%;
+
+      & > img {
+        margin-left: -175px;
+        margin-top: -60px;
+        width: 600px;
+      }
+    }
+    &__text {
+      height: 75%;
+      padding-top: 15px;
+      padding-left: 35px;
     }
   }
 }

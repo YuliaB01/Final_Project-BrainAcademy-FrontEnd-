@@ -3,7 +3,7 @@ $(document).ready(function() {
     initDataTable();
     initScrollUp();
     initSlider();
-    initRating();
+    // initRating();
     initEvents();
 
     //Header change background-color on page scroll
@@ -94,25 +94,37 @@ function initSlider() {
         nextText: '<img src="/Images/slide/interface-arrow_right.svg" height="30" width="30"/>',
         prevText: '<img src="/Images/slide/interface-arrow_left.svg" height="30" width="30"/>'
     });
+
+    var slideIds = [
+        "#slide",
+        "#slide1",
+        ".slide2"
+    ];
+
+    for (var i = 0; i < slideIds.length; i++) {
+        console.log($(slideIds[i]));
+
+        $(slideIds[i]).jRate({
+            startColor: "white",
+            endColor: "white",
+            shape: 'STAR',
+            horizontal: false,
+            strokeWidth: '20px',
+            strokeColor: 'white',
+            backgroundColor: 'transparent',
+            width: 30,
+            height: 30,
+            shapeGap: '10px',
+            precision: 0.5,
+            rating: 4
+        });
+    }
 }
 
 //jRating plugin
-function initRating() {
-    $("#jRate").jRate({
-        startColor: "white",
-        endColor: "white",
-        shape: 'STAR',
-        horizontal: false,
-        strokeWidth: '20px',
-        strokeColor: 'white',
-        backgroundColor: 'transparent',
-        width: 30,
-        height: 30,
-        shapeGap: '10px',
-        precision: 0.5,
-        rating: 4
-    });
-}
+// function initRating() {
+//
+// }
 
 function initScrollUp() {
     $.scrollUp({

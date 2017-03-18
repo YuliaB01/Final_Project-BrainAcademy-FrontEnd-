@@ -30,8 +30,12 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "datatables.net": "^1.10.13",
+    "datatables.net-dt": "^1.10.13",
     "font-awesome": "^4.7.0",
     "imagemin": "^5.2.2",
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "jquery-validation": "^1.16.0",
+    "toastr": "^2.1.2"
   }
 }

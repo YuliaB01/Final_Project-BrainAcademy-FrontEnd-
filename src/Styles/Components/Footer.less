@@ -46,7 +46,7 @@
 
   &__logo {
     .u-vertical-aligner;
-    height: 70px;
+    height: @header-height;
     text-align: center;
   }
 
@@ -94,7 +94,32 @@
     }
 
     &__menu {
-      padding: 0 40px;
+      padding: 0 60px;
+    }
+
+    &__link_sm-invisible {
+      display: none;
+    }
+  }
+}
+
+
+@media (max-width: 375px) {
+  .footer {
+    &__menu {
+      padding: 0 10px;
+    }
+
+    &__list {
+      width: 95%;
+    }
+
+    &__logo {
+      .u-vertical-aligner;
+    }
+
+    &__text {
+      padding-bottom: 15px;
     }
   }
 }

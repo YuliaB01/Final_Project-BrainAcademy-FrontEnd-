@@ -1,8 +1,9 @@
 .Chef-cook {
   position: relative;
-  width: 400px;
+  //width: 400px;
   text-align: center;
   margin: 50px auto;
+  padding: 0 100px;
 
   &__heading {
     font-family: "AlegreyaBold", sans-serif;
@@ -74,7 +75,7 @@
     font-family: "ScriptinaRegular", sans-serif;
     font-size: 24px;
     line-height: 1.25;
-    color: #a47d5e;
+    color: @recipe-heading-color;
     margin: 40px 0 40px 0;
     position: relative;
 
@@ -102,6 +103,83 @@
       color: #b6b5b2;
       line-height: .5;
       z-index: 278;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .Chef-cook {
+    padding: 0 75px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .Chef-cook {
+    padding: 0 70px;
+  }
+}
+
+@media (max-width: 990px) {
+  .Chef-cook {
+    padding: 0 200px;
+
+    &__heading {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Chef-cook {
+    padding: 0 160px;
+    .u-clearfix;
+  }
+}
+
+@media (max-width: 700px) {
+ .Chef-cook {
+   padding: 0 110px;
+ }
+}
+
+
+@media (max-width: 570px) {
+  .Chef-cook {
+    padding: 0 75px;
+  }
+}
+
+@media (max-width: 500px) {
+  .Chef-cook {
+    padding: 0 35px;
+  }
+}
+@media (max-width: 375px) {
+  .Chef-cook {
+    padding: 0 15px;
+
+    &__heading {
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .Chef-cook {
+    &__last-name,
+    &__first-name {
+      width: 95px;
+      font-size: 20px;
+      line-height: 50px;
+    }
+
+    &__quote {
+      font-size: 20px;
+
+      &:before,
+      &:after {
+        font-size: 50px;
+      }
     }
   }
 }
