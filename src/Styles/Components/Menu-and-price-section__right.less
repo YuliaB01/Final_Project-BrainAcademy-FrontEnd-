@@ -1,10 +1,49 @@
 .Menu-and-price-section__right-part {
+z-index: 0;
 
+  .stack {
+    width: 440px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+  }
+
+  .paper-1 {
+    width: 100px;
+    position: absolute;
+    height: 565px;
+    background: #d8d5c7;
+    right: -14px;
+    top: 20px;
+    z-index: 2;
+  }
+
+  .paper-1-inside {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    bottom: 7px;
+    left: 7px;
+    border-top: 1px dashed @dashed-border-color;
+    border-right: 1px dashed @dashed-border-color;
+    border-bottom: 1px dashed @dashed-border-color;
+  }
+
+  .paper-2 {
+    width: 100px;
+    position: absolute;
+    height: 520px;
+    background: #bfbbb0;
+    right: -28px;
+    top: 45px;
+    z-index: 1;
+  }
   .content-wrapper {
     width: 440px;
     height: 610px;
     overflow: hidden;
     margin: 100px auto;
+    position: relative;
 
     &:before {
       .u-general-pseudo-element-styles;
@@ -24,6 +63,7 @@
     width: 100%;
     background: #f3f1e9;
     position: relative;
+    z-index: 4;
   }
 
   .inside-content {
@@ -32,9 +72,9 @@
     right: 10px;
     bottom: 0;
     left: 10px;
-    border-top: 1px dashed #ccc;
-    border-left: 1px dashed #ccc;
-    border-right: 1px dashed #ccc;
+    border-top: 1px dashed @dashed-border-color;
+    border-left: 1px dashed @dashed-border-color;
+    border-right: 1px dashed @dashed-border-color;
 
     &:before {
       content: "";
@@ -69,6 +109,7 @@
     width: 400px;
     float: left;
     position: relative;
+    z-index: 5;
   }
 
   .bottom-border {
@@ -77,8 +118,8 @@
     right: 10px;
     bottom: 10px;
     left: 0;
-    border-bottom: 1px dashed #ccc;
-    border-right: 1px dashed #ccc;
+    border-bottom: 1px dashed @dashed-border-color;
+    border-right: 1px dashed @dashed-border-color;
   }
 
   .head-text {
