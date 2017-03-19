@@ -254,7 +254,6 @@ function initStarRating() {
         ];
 
     for (var i = 0; i < slideIds.length; i++) {
-        console.log($(slideIds[i]));
         $(slideIds[i]).on('starrr:change', function (e, value) {
             $('#count').html(value);
         });
@@ -264,6 +263,7 @@ function initStarRating() {
 function removeClassOnResize() {
     $( window ).on('resize', function() {
         var windowSize = $(window).width();
+
         if(windowSize < 992){
             $('.img-div').removeClass('hvr-curl-bottom-left');
         } else {
