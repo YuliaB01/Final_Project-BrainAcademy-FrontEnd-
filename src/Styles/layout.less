@@ -90,13 +90,13 @@ body, html {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  border-top: 10px solid white;
+  border-top: 10px solid @links-color;
 
   &:before {
     .u-general-pseudo-element-styles;
     width: 80px;
     height: 80px;
-    background-color: #fff;
+    background-color: @main-border-and-link-colo;
     border-radius: 50%;
     top: -40px;
     left: 50%;
@@ -199,7 +199,7 @@ body, html {
     text-transform: uppercase;
     padding: 160px 0 100px;
     margin: 0;
-    color: #fff;
+    color: @links-color;
     text-shadow: 1px 2px 5px #000;
   }
 }
@@ -219,7 +219,7 @@ body, html {
     text-transform: uppercase;
     margin: 0;
     padding: 160px 0 100px;
-    color: #fff;
+    color: @links-color;
     text-shadow: 1px 2px 5px #000;
   }
 }
@@ -261,7 +261,7 @@ legend {
 }
 .category-tile {
   position: relative;
-  border: 2px solid #fff;
+  border: 2px solid @links-color;
   overflow: hidden;
   width: 300px;
   height: 300px;
@@ -276,7 +276,7 @@ legend {
   font-size: 1.2em;
   text-transform: uppercase;
   background-color: #000;
-  color: #fff;
+  color: @links-color;
   opacity: .8;
 }
 .category-tile:hover {

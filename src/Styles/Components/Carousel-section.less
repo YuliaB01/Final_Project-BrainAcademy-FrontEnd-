@@ -9,7 +9,6 @@
     margin-left: 65px;
     width: 90%;
     height: 510px;
-    //background: #fff;
   }
 
   .inside {
@@ -24,8 +23,9 @@
   }
 
   .active {
-    box-shadow: 0px 0px 20px #d8bba3;
+    box-shadow: 0 0 20px #d8bba3;
   }
+
   .img-div {
     width: 45%;
     height: 100%;
@@ -44,7 +44,7 @@
   .starrr {
     position: absolute;
     top: 50%;
-    color: white;
+    color: @links-color;
     margin-top: -100px;
     left: 10%;
   }
@@ -53,10 +53,11 @@
     font-size: 25px;
     padding: 5px 1px;
     cursor: pointer;
-    color: white;
+    color: @links-color;
     display: block;
-    text-shadow: 0px 2px 30px #000;
+    text-shadow: 0 2px 30px #000;
   }
+
   /* Curl Bottom Left */
   .hvr-curl-bottom-left {
     display: inline-block;
@@ -66,6 +67,7 @@
     box-shadow: 0 0 1px transparent;
     position: relative;
   }
+
   .hvr-curl-bottom-left:before {
     pointer-events: none;
     position: absolute;
@@ -74,9 +76,9 @@
     width: 0;
     bottom: 0;
     left: 0;
-    background: white;
+    background: @links-color;
     /* IE9 */
-    background: linear-gradient(45deg,#e8eae7 45%,#aaa 50%,#ccc 56%,#fff 80%);
+    background: linear-gradient(45deg,#e8eae7 45%,#aaa 50%,#ccc 56%,@links-color 80%);
     box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.4);
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
@@ -102,7 +104,7 @@
       .u-general-pseudo-element-styles;
       width: 50px;
       height: 50px;
-      background: #fff;
+      background: @links-color;
       border-radius: 50%;
       top: 50%;
       margin-top: -25px;
@@ -361,7 +363,6 @@
       right: 0;
       top: -75%;
       box-shadow: none;
-
     }
 
     .head {

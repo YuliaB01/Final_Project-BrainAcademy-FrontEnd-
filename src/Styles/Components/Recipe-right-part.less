@@ -12,7 +12,7 @@
     margin: 0 auto;
     width: 85%;
     display: inline-block;
-    border: 10px solid #fff;
+    border: 10px solid @links-color;
   }
 
   &__link {
@@ -38,7 +38,7 @@
   &__prep {
     width: 100%;
     height: 33.3%;
-    background-color: #fff;
+    background-color: @links-color;
     opacity: .8;
     text-align: center;
     text-transform: uppercase;
@@ -76,7 +76,7 @@
   &__cook {
     width: 100%;
     height: 33.3%;
-    background-color: #fff;
+    background-color: @links-color;
     opacity: .8;
     text-align: center;
     text-transform: uppercase;
@@ -105,6 +105,19 @@
     position: absolute;
     top: 93%;
     left: 13%;
+    display: table-cell;
+    vertical-align: middle;
+    width: 170px;
+    height: 60px;
+    background-color: @links-color;
+    border: 1px dashed #dfc691;
+    transition: background-color .2s linear;
+
+    &:hover {
+      background-color: #dfc691;
+      color: @links-color;
+      border-color: @links-color;
+    }
   }
 
   &__btn {
@@ -114,14 +127,11 @@
     text-transform: uppercase;
     width: 170px;
     height: 60px;
-    background-color: #fff;
-    border: 1px dashed #dfc691;
-    transition: background-color linear .2s;
+    .u-vertical-aligner;
 
     &:hover {
-      background-color: #dfc691;
-      color: #fff;
-      border-color: #fff;
+      text-decoration: none;
+      color: @links-color;
     }
   }
 }
