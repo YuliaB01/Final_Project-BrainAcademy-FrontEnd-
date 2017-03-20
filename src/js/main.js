@@ -79,10 +79,15 @@ function initValidator() {
         },
         submitHandler: function(form) {
             $.post("/", $('form[name="contact-form"]').serialize()).always(function (data) {
-                toastr.success("Thank you!Your message was successfully send!");
+                clearFormInputs($('form[name="contact-form"]'));
+                toastr.success("Thank you! Your message was successfully send!");
             });
         }
     });
+}
+
+function clearFormInputs(target) {
+    target.find(":input").val("");
 }
 
 function initSlider() {

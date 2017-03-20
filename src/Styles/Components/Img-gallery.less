@@ -105,13 +105,22 @@
 
 @media (max-width: 990px) {
   .Img-gallery {
-    padding: 0 50px;
+    padding: 0 20px;
+    margin-top: 60px;
+
+    &__list {
+      margin-top: 55px;
+    }
   }
 }
 
 @media (max-width: 767px) {
   .Img-gallery {
     margin: 0 auto;
+
+    &__list {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -121,6 +130,20 @@
   }
 }
 
+@media (max-width: 400px) {
+  .Img-gallery {
+
+    &:before {
+    width: 235px;
+    height: 235px;
+    margin-top: -115px;
+  }
+    &:after {
+      margin-top: -40px;
+      font-size: 26px;
+    }
+  }
+}
 @media (max-width: 375px) {
  .Img-gallery {
    padding: 0 10px;

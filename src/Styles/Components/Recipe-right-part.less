@@ -3,16 +3,17 @@
 
   &__content {
     width: 100%;
-    padding-top: @header-height;
+
     text-align: right;
     position: relative;
   }
 
   &__image {
+    padding-top: @header-height;
     margin: 0 auto;
     width: 85%;
-    display: inline-block;
-    border: 10px solid @links-color;
+    display: block;
+
   }
 
   &__link {
@@ -25,14 +26,15 @@
     width: 100%;
     height: auto;
     display: inline-block;
+    border: 10px solid @links-color;
   }
 
   &__prep-time {
     height:600px;
     position: absolute;
     width: 25%;
-    top: 5%;
-    left: 74%;
+    top: 0%;
+    left: 67%;
   }
 
   &__prep {
@@ -104,7 +106,7 @@
   &__button {
     position: absolute;
     top: 93%;
-    left: 13%;
+    left: 5%;
     display: table-cell;
     vertical-align: middle;
     width: 170px;
@@ -135,6 +137,7 @@
       background-color: #dfc691;
       text-decoration: none;
       color: @links-color;
+      outline-color: #dfc691;
     }
   }
 }

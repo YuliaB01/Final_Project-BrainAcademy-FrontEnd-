@@ -1,23 +1,4 @@
 .Hero-section {
-  //&__img {
-  //
-  //  width: 100%;
-  //  height: auto;
-  //}
-
-  //&__content {
-    //position: absolute;
-    //top: 0;
-    //left: 0;
-    //right: 0;
-    //margin-left: auto;
-    //margin-right: auto;
-    //width: 100%;
-    //text-align: center;
-    //padding-top: 200px;
-  //}
-
-
   &__row-wrapper {
     text-align: center;
     position: relative;
@@ -56,27 +37,38 @@
     margin-bottom: 65px;
   }
 
-  &__button {
+  &__btn {
     width: 200px;
-    height: 50px;
+    height: 60px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px dashed #9e9c93;
+    background-color: @header-background;
+  }
+
+  &__button {
+    width: 100%;
+    height: 100%;
     font-family: "AlegreyaBold", sans-serif;
     font-size: 14px;
     color: @links-color;
     text-transform: uppercase;
     line-height: 24px;
-    border: 1px dashed #9e9c93;
-    background-color: @header-background;
     letter-spacing: 4px;
     z-index: 222;
+    .u-vertical-aligner;
 
     &:hover {
       background: rgba(72,72,68, 0.8);
       cursor: pointer;
+      color: @links-color;
+      text-decoration: none;
     }
-  }
-  &__button:hover {
-    background-color: rgba(72,72,68, 0.8);
-    cursor: pointer;
+
+    &:active {
+      background: rgba(72,72,68, 0.8);
+      color: @links-color;
+    }
   }
 }
 

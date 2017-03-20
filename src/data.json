@@ -1,54 +1,54 @@
 [
   {
-    "dish": "Napoleon",
+    "dish": "NAPOLEON",
     "ingredients": "A twist to the classic French dessert: layered between puff pastry sheets, tiramisu filling, vanilla and chocolate cakes, and French cream accented with rum raisins and cranberries.",
     "weight": "150g",
     "price": "$10"
   },
   {
-    "dish": "Lemon mini cakes",
+    "dish": "LEMON MINI CAKES",
     "ingredients": "Soft and moist lemon flavored mini sponge cakes.",
     "weight": "70g",
     "price": "$7"
   },
   {
-    "dish": "Spicy sausage",
+    "dish": "SPICY SAUSAGE",
     "ingredients": "A flavorful combination of sausage and shredded cheese. Topped with mayonnaise and Sriracha Chili sauce.",
     "weight": "100g",
     "price": "$18"
   },
   {
-    "dish": "Buttermilk Pancakes with Bacon",
+    "dish": "BUTTERMILK PANCAKES WITH BACON",
     "ingredients": "Four fluffy buttermilk pancakes served with warm vanilla maple syrup and a side of applewood smoked bacon. ",
     "weight": "200g",
     "price": "$25"
   },
   {
-    "dish": "Smoked Bacon & Cheddar Panini",
+    "dish": "SMOKED BACON & CHEDDAR PANINI",
     "ingredients": "Scrambled eggs, crisp applewood smoked bacon and cheddar cheese on our grilled country sourdough bread.",
     "weight": "170g",
     "price": "$12.5"
   },
   {
-    "dish": "Anaheim Panini",
+    "dish": "ANAHEIM PANINI",
     "ingredients": "Freshly scrambled eggs, applewood smoked bacon, tomatoes, green onions, avocado and cheddar cheese on grilled sourdough.",
     "weight": "100g",
     "price": "$11.5"
   },
   {
-    "dish": "Chicken Apple Sausage Power Flat",
+    "dish": "CHICKEN APPLE SAUSAGE POWER FLAT",
     "ingredients": "Scrambled eggs with chicken apple sausage and cheddar & Parmesan cheeses in a grilled multigrain flatbread.",
     "weight": "100g",
     "price": "$11.5"
   },
   {
-    "dish": "Buttermilk Pancakes & Eggs with Bacon",
+    "dish": "BUTTERMILK PANCAKES & EGGS WITH BACON",
     "ingredients": "Four fluffy buttermilk pancakes served with warm vanilla maple syrup, freshly scrambled eggs and applewood smoked bacon.",
     "weight": "200g",
     "price": "$25"
   },
   {
-    "dish": "Belgian waffle",
+    "dish": "BELGIAN WAFFLE",
     "ingredients": "A crisp Belgian waffle served with warm syrup. Served with two eggs and choice of bacon or sausage.",
     "weight": "150g",
     "price": "$18"

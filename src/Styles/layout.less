@@ -116,8 +116,6 @@ body, html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  //position: relative;
-  //z-index: -1;
 }
 
 .menu-and-price-wrapper {
@@ -126,14 +124,12 @@ body, html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  //position: relative;
   z-index: -1;
 }
 
 .recipes-wrapper {
   min-height: 760px;
   background: @footer-bg-color;
-  //position: relative;
   z-index: -1;
 }
 
@@ -188,7 +184,6 @@ body, html {
   background-size: cover;
   position: relative;
 
-
   &__heading {
     font-family: AlegreyaBold,sans-serif;
     font-size: 5em;
@@ -208,13 +203,12 @@ body, html {
   background-size: cover;
   position: relative;
 
-
   &__heading {
     font-family: AlegreyaBold,sans-serif;
     font-size: 4em;
     text-transform: uppercase;
     margin: 0;
-    padding: 160px 0 100px;
+    padding: 145px 0 100px;
     color: @links-color;
     text-shadow: 1px 2px 5px #000;
   }
@@ -230,14 +224,57 @@ body, html {
 }
 
 fieldset {
-  margin-top: 40px;
+  margin-top: 15px;
 }
 
 legend {
   border-bottom: none;
   font-family: "AlegreyaRegular", sans-serif;
-  font-size: 35px;
+  font-size: 25px;
   color: @recipe-heading-color;
+}
+
+.get-in-touch {
+  text-align: center;
+  text-transform: capitalize;
+  position: relative;
+  font-size: 35px;
+  color: #a47d5e;
+  font-family: "AlegreyaRegular", sans-serif;
+  margin-top: 35px;
+  margin-bottom: 20px;
+
+  &:after {
+    .u-general-pseudo-element-styles;
+    width: 350px;
+    height: 350px;
+    background-image: url(/Images/wind-weel.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 70%;
+    top: 220%;
+  }
+}
+
+.get-in-touch-message {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "ProximaNovaRegular", sans-serif;
+  font-size: 16px;
+  padding: 0 20px;
+}
+
+input.error,
+textarea.error,
+input.error:focus,
+textarea.error:focus {
+  border: 1px solid red;
+  box-shadow: 0 0 10px #F66C6C;
+}
+
+label.error {
+  color: #A30A0A;
+  font-family: "ProximaNovaRegular", sans-serif;
 }
 
 .map-container iframe{
@@ -249,61 +286,55 @@ legend {
   pointer-events: auto;
 }
 
-.menu-wrapper {
-  background-image: url(/Images/img_texture.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-.category-tile {
-  position: relative;
-  border: 2px solid @links-color;
-  overflow: hidden;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto 40px;
-}
-.category-tile span {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  background-color: #000;
+.what-we-offer {
+  font-family: "AlegreyaRegular", sans-serif;
   color: @links-color;
-  opacity: .8;
-}
-.category-tile:hover {
-  box-shadow: 0 1px 5px 1px #cccccc;
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+  letter-spacing: 3px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -65%;
+    width: 100px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: inline-block;
+    border-bottom: 2px solid #fff;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -65%;
+    width: 100px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: inline-block;
+    border-bottom: 2px solid #fff;
+  }
 }
 
-#menu-categories-title,
-#menu-categories-title2 {
-  font-family: "ScriptinaRegular", sans-serif;
-  color: @recipe-heading-color;
-  font-size: 45px;
-  padding-bottom: 30px;
-}
-#menu-categories-title + div,
-#menu-categories-title2 + div {
-  margin-bottom: 50px;
-  font-family: "ProximaNovaRegular", sans-serif;
-  font-size: 18px;
+.our-menu {
+  display: block;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
 
 .price-table {
   margin-bottom: 30px;
 }
 
-
-
 #slider-prev {
   display: inline-block;
   width: 35px;
   height: 35px;
   top: 50%;
+  left: 0;
   position: absolute;
   margin-top: -20px;
 }
@@ -317,7 +348,6 @@ legend {
   position: absolute;
   margin-top: -20px;
 }
-
 
 .footer {
   height: 240px;
@@ -340,7 +370,6 @@ legend {
 
   .recipes-content {
     padding-bottom: 100px;
-
   }
 }
 
@@ -371,6 +400,10 @@ legend {
     width: 70%;
     margin-right: -15px;
   }
+
+  .Contact-us-section {
+    padding: 0;
+  }
 }
 
 @media (max-width: 660px) {
@@ -384,6 +417,25 @@ legend {
     &__heading,
     &__subheading {
       line-height: 48px;
+    }
+  }
+
+  .logo-container {
+    width: 33%;
+  }
+}
+
+@media (max-width: 345px) {
+  .logo-container {
+    width: 34%;
+  }
+}
+
+@media (max-width: 320px) {
+  .parallax-window {
+
+    &__heading {
+      font-size: 4em;
     }
   }
 }

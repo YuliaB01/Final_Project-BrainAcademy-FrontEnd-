@@ -6,16 +6,24 @@
   .carousel-slide {
     padding-top: 50px;
     padding-right: 100px;
-    margin-left: 65px;
-    width: 90%;
+    margin: 0 auto;
+    //width: 90%;
+    max-width: 100%;
     height: 510px;
   }
 
   .inside {
     position: absolute;
-    bottom: 5%;
-    left: 43%;
-    width: 40%;
+    //bottom: 5%;
+    bottom: 0;
+    //right: 0;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    //left: 43%;
+    margin: 0 25px 20px 25px;
+    //max-width: 40%;
+    max-width: 70%;
     height: 100px;
     z-index: 3;
     padding-left: 25px;
@@ -211,10 +219,6 @@
 @media (max-width: 992px) {
   .Carousel-section {
 
-    .jRate {
-      top: 15%;
-      left: 13%;
-    }
     .carousel-slide {
       height: 585px;
       width: 70%;
@@ -302,14 +306,6 @@
     .carousel-slide {
       width: 90%;
     }
-
-    .jRate {
-      left: 15%;
-    }
-
-    .inside {
-      width: 65%;
-    }
   }
 }
 
@@ -320,6 +316,7 @@
     }
   }
 }
+
 @media (max-width: 660px) {
   .Carousel-section {
 
@@ -338,23 +335,36 @@
   }
 }
 
+@media (max-width: 600px) {
+  .Carousel-section {
+
+    &__readyIn {
+      display: none;
+    }
+
+    .inside {
+      width: 80%;
+    }
+
+    .carousel-slide {
+      padding: 0 20px;
+    }
+  }
+}
+
 @media (max-width: 375px) {
   .Carousel-section {
     .carousel-slide {
       width: 100%;
-      margin-left: 10px;
-      padding-right: 20px;
-    }
-
-    .jRate {
-      left: 15%;
-      top: 11%;
+      margin-left: 0;
+      padding: 0;
     }
 
     .inside {
-      left: 7%;
+      left: 4%;
       bottom: 0;
-      width: 80%;
+      min-width: 80%;
+      margin: 0 25px 20px;
     }
 
     &__readyIn {
@@ -375,7 +385,7 @@
     }
 
     .img-div {
-      height: 50%;
+      height: 47%;
 
       & > img {
         margin-left: -175px;
@@ -383,10 +393,20 @@
         width: 600px;
       }
     }
+
+    &__header {
+      font-size: 35px;
+      line-height: 60px;
+    }
+
+    &__p {
+      margin-top: 40px;
+      padding-right: 0;
+    }
+
     &__text {
       height: 75%;
-      padding-top: 15px;
-      padding-left: 35px;
+      padding: 15px;
     }
   }
 }
