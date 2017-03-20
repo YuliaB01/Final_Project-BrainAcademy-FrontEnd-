@@ -48,7 +48,6 @@ gulp.task("js:vendor", function() {
         "node_modules/jquery/dist/jquery.js",
         "node_modules/jquery-validation/dist/jquery.validate.js",
         "node_modules/bootstrap/dist/js/bootstrap.js",
-        // "node_modules/parallax.js/src/parallax.js",
         "src/Resources/jquery.bxslider/jquery.bxslider.js",
         "src/Resources/scrollup/dist/jquery.scrollUp.js",
         "node_modules/toastr/build/toastr.min.js",
@@ -80,6 +79,7 @@ gulp.task("json", function() {
 gulp.task("images", function() {
     return gulp.src([
         "src/Images/**/*.{png,jpg,gif,jpeg,svg}",
+        "src/Resources/*.png",
         "src/Resources/jquery.bxslider/images/*.{png,gif}",
         "node_modules/datatables.net-dt/images/*.png"
     ])

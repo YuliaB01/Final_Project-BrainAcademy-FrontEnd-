@@ -97,8 +97,8 @@ function initSlider() {
         pagerCustom: '#bx-pager',
         controls: true,
         pager: true,
-        nextText: '<img src="/Images/slide/interface-arrow_right.svg" height="30" width="30"/>',
-        prevText: '<img src="/Images/slide/interface-arrow_left.svg" height="30" width="30"/>'
+        nextText: '<img src="/Images/interface-arrow_right.svg" height="30" width="30"/>',
+        prevText: '<img src="/Images/interface-arrow_left.svg" height="30" width="30"/>'
     });
 }
 
