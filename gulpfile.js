@@ -79,7 +79,6 @@ gulp.task("json", function() {
 gulp.task("images", function() {
     return gulp.src([
         "src/Images/**/*.{png,jpg,gif,jpeg,svg}",
-        "src/Resources/*.png",
         "src/Resources/jquery.bxslider/images/*.{png,gif}",
         "node_modules/datatables.net-dt/images/*.png"
     ])
