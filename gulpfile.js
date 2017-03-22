@@ -49,7 +49,7 @@ gulp.task("js:vendor", function() {
         "node_modules/jquery-validation/dist/jquery.validate.js",
         "node_modules/bootstrap/dist/js/bootstrap.js",
         "src/Resources/jquery.bxslider/jquery.bxslider.js",
-        "src/Resources/scrollup/dist/jquery.scrollUp.js",
+        "src/Resources/scrollup/jquery.scrollUp.js",
         "node_modules/toastr/build/toastr.min.js",
         "node_modules/datatables.net/js/jquery.dataTables.js"
     ])
