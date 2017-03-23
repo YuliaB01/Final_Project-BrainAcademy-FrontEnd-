@@ -8,6 +8,7 @@ var gulpIf = require("gulp-if");
 var autoprefixer = require("gulp-autoprefixer");
 var sync = require("browser-sync").create();
 var image = require("gulp-image");
+var rigger = require("gulp-rigger");
 
 var isDevelopment = false;
 
@@ -68,6 +69,7 @@ gulp.task("fonts", function() {
 
 gulp.task("html", function() {
     return gulp.src("src/*.html")
+        .pipe(rigger())
         .pipe(gulp.dest("dist"));
 });
 
