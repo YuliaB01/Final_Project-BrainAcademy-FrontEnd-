@@ -1,3 +1,8 @@
+//toastr styles
+#toast-container {
+  z-index: 10000;
+}
+
 // nav-bar bootstrap styles
 .navbar-toggle {
   margin-top: 18px;
@@ -14,6 +19,7 @@
 .navbar-collapse {
   border-top: none;
   box-shadow: none;
+  padding: 0;
 }
 
 .navbar-toggle .icon-bar:nth-child(2) {
@@ -72,19 +78,6 @@
   white-space: nowrap;
   margin: 0;
   text-align: center;
-
-  //max-width: 100%;
-  //height: 100px;
-  //overflow: hidden;
-  //overflow: visible;
-  //text-align: justify;
-  //padding-left: 45px;
-  //padding-right: 45px;
-  //padding: 0;
-  //width: auto;
-  //display: block;
-  //font-size: 0;
-  //white-space: nowrap;
   .u-vertical-aligner;
 
   &:after {
@@ -225,13 +218,6 @@ table.dataTable.display tbody tr td {
   text-transform: uppercase;
 }
 
-//.dataTables_wrapper .dataTables_paginate .paginate_button .next,
-//.dataTables_wrapper .dataTables_paginate .paginate_button .prev {
-//  width: 100px;
-//  background: #a47d5e;
-//  border-radius: 0;
-//}
-
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
     background: #b6977f;
     color: #fff;
@@ -280,9 +266,7 @@ table.dataTable.display tbody tr td {
 }
 
 @media (max-width: 767px) {
-  //.navbar-collapse.in {
-  //  overflow-y: visible;
-  //}
+
 }
 
 @media (max-width: 685px) {
@@ -300,9 +284,7 @@ table.dataTable.display tbody tr td {
     height: 721.297px!important;
   }
 }
-.navbar-collapse {
-  padding: 0;
-}
+
 
 
 
