@@ -19,10 +19,10 @@ $(document).ready(function() {
     });
 
     //Prevent map scrolling on hover
-    $('.map-container').click(function() {
-        $(this).find('iframe').addClass('clicked');
+    $(".map-container").click(function() {
+        $(this).find("iframe").addClass("clicked");
     }).mouseleave(function() {
-        $(this).find('iframe').removeClass('clicked');
+        $(this).find("iframe").removeClass("clicked");
     });
 });
 
@@ -78,8 +78,8 @@ function initValidator() {
             }
         },
         submitHandler: function(form) {
-            $.post("/", $('form[name="contact-form"]').serialize()).always(function (data) {
-                clearFormInputs($('form[name="contact-form"]'));
+            $.post("/", $("form[name='contact-form']").serialize()).always(function (data) {
+                clearFormInputs($("form[name='contact-form']"));
                 toastr.success("Thank you! Your message was successfully send!");
             });
         }
@@ -91,14 +91,14 @@ function clearFormInputs(target) {
 }
 
 function initSlider() {
-    $('.bxslider').bxSlider({
-        nextSelector: '#slider-next',
-        prevSelector: '#slider-prev',
-        pagerCustom: '#bx-pager',
+    $(".bxslider").bxSlider({
+        nextSelector: "#slider-next",
+        prevSelector: "#slider-prev",
+        pagerCustom: "#bx-pager",
         controls: true,
         pager: true,
-        nextText: '<img src="/Images/interface-arrow_right.svg" height="30" width="30"/>',
-        prevText: '<img src="/Images/interface-arrow_left.svg" height="30" width="30"/>'
+        nextText: "<img src='/Images/interface-arrow_right.svg' height='30' width='30'/>",
+        prevText: "<img src='/Images/interface-arrow_left.svg' height='30' width='30'/>"
     });
 }
 
@@ -109,40 +109,40 @@ function initScrollUp() {
 }
 
 function initEvents() {
-    $('#callback').change(function() {
-        if($(this).prop('checked')) {
-            $('#callback-type').slideDown();
+    $("#callback").change(function() {
+        if($(this).prop("checked")) {
+            $("#callback-type").slideDown();
         } else {
-            $('#callback-type').slideUp();
+            $("#callback-type").slideUp();
         }
     });
 
-    $('#inlineRadio2').change(function() {
-        if($(this).prop('checked')) {
-            $('#request-data').slideDown();
+    $("#inlineRadio2").change(function() {
+        if($(this).prop("checked")) {
+            $("#request-data").slideDown();
         } else {
-            $('#request-data').slideUp();
+            $("#request-data").slideUp();
         }
     });
 
-    $('#inlineRadio1').change(function() {
-        if($('#inlineRadio1').prop('checked')) {
-            $('#request-data').slideUp();
+    $("#inlineRadio1").change(function() {
+        if($("#inlineRadio1").prop("checked")) {
+            $("#request-data").slideUp();
         }
     });
 }
 
 function initDataTable() {
-    $('#menu-table').DataTable({
+    $("#menu-table").DataTable({
         ajax: {
-            url: '/data.json',
-            dataSrc: ''
+            url: "/data.json",
+            dataSrc: ""
         },
         columns: [
-            { data: 'dish' },
-            { data: 'ingredients' },
-            { data: 'weight' },
-            { data: 'price' }
+            { data: "dish" },
+            { data: "ingredients" },
+            { data: "weight" },
+            { data: "price" }
         ]
     });
 }
@@ -175,16 +175,16 @@ function initStarRating() {
                 }
                 this.createStars();
                 this.syncRating();
-                this.$el.on('mouseover.starrr', 'i', function(e) {
-                    return _this.syncRating(_this.$el.find('i').index(e.currentTarget) + 1);
+                this.$el.on("mouseover.starrr", "i", function(e) {
+                    return _this.syncRating(_this.$el.find("i").index(e.currentTarget) + 1);
                 });
-                this.$el.on('mouseout.starrr', function() {
+                this.$el.on("mouseout.starrr", function() {
                     return _this.syncRating();
                 });
-                this.$el.on('click.starrr', 'i', function(e) {
-                    return _this.setRating(_this.$el.find('i').index(e.currentTarget) + 1);
+                this.$el.on("click.starrr", "i", function(e) {
+                    return _this.setRating(_this.$el.find("i").index(e.currentTarget) + 1);
                 });
-                this.$el.on('starrr:change', this.options.change);
+                this.$el.on("starrr:change", this.options.change);
             }
 
             Starrr.prototype.createStars = function() {
@@ -203,7 +203,7 @@ function initStarRating() {
                 }
                 this.options.rating = rating;
                 this.syncRating();
-                return this.$el.trigger('starrr:change', rating);
+                return this.$el.trigger("starrr:change", rating);
             };
 
             Starrr.prototype.syncRating = function(rating) {
@@ -212,16 +212,16 @@ function initStarRating() {
                 rating || (rating = this.options.rating);
                 if (rating) {
                     for (i = _i = 0, _ref = rating - 1; 0 <= _ref ? _i <= _ref : _i >= _ref; i = 0 <= _ref ? ++_i : --_i) {
-                        this.$el.find('i').eq(i).removeClass('fa-star-o').addClass('fa-star');
+                        this.$el.find("i").eq(i).removeClass("fa-star-o").addClass("fa-star");
                     }
                 }
                 if (rating && rating < 5) {
                     for (i = _j = rating; rating <= 4 ? _j <= 4 : _j >= 4; i = rating <= 4 ? ++_j : --_j) {
-                        this.$el.find('i').eq(i).removeClass('fa-star').addClass('fa-star-o');
+                        this.$el.find("i").eq(i).removeClass("fa-star").addClass("fa-star-o");
                     }
                 }
                 if (!rating) {
-                    return this.$el.find('i').removeClass('fa-star').addClass('fa-star-o');
+                    return this.$el.find("i").removeClass("fa-star").addClass("fa-star-o");
                 }
             };
 
@@ -236,11 +236,11 @@ function initStarRating() {
                 return this.each(function() {
                     var data;
 
-                    data = $(this).data('star-rating');
+                    data = $(this).data("star-rating");
                     if (!data) {
-                        $(this).data('star-rating', (data = new Starrr($(this), option)));
+                        $(this).data("star-rating", (data = new Starrr($(this), option)));
                     }
-                    if (typeof option === 'string') {
+                    if (typeof option === "string") {
                         return data[option].apply(data, args);
                     }
                 });
@@ -259,20 +259,20 @@ function initStarRating() {
         ];
 
     for (var i = 0; i < slideIds.length; i++) {
-        $(slideIds[i]).on('starrr:change', function (e, value) {
-            $('#count').html(value);
+        $(slideIds[i]).on("starrr:change", function (e, value) {
+            $("#count").html(value);
         });
     }
 }
 
 function removeClassOnResize() {
-    $( window ).on('resize', function() {
+    $( window ).on("resize", function() {
         var windowSize = $(window).width();
 
         if(windowSize < 992){
-            $('.img-div').removeClass('hvr-curl-bottom-left');
+            $(".img-div").removeClass("hvr-curl-bottom-left");
         } else {
-            $('.img-div').addClass('hvr-curl-bottom-left');
+            $(".img-div").addClass("hvr-curl-bottom-left");
         }
     });
 }
