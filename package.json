@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "datatables.net": "^1.10.13",
+    "datatables.net": "^1.11.3",
     "datatables.net-dt": "^1.10.13",
     "font-awesome": "^4.7.0",
     "imagemin": "^5.2.2",
